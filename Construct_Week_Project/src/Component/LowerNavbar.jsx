@@ -71,7 +71,7 @@ const LowerNavbar = ()=>{
             <Box  gap='18px' display="flex" justifyContent="start" w="30%">
             
             <NavLink to={'/crypto'}><Text  p='2px' bg='navy' color='white' fontWeight="bold" fontSize='xs' borderRadius='2px' border="none">Crypto</Text></NavLink>
-          <Link><Text fontSize="sm" fontWeight="bold">IND VS ZIM 2022</Text></Link>  
+            <Link><Text fontSize="sm" fontWeight="bold">IND VS ZIM 2022</Text></Link>  
             <Link isExternal href="https://www.news18.com/netrasuraksha/">
                     <Image src="https://www.firstpost.com/static/images/netrasuraksha_L2_103x25px.jpg"/>
             </Link>

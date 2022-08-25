@@ -7,7 +7,7 @@ import LowerNavbar from "./LowerNavbar";
 import DrawerExample from "./Drawer";
 import Draw from "./Draw";
 import SearchDrawer from "./SearchDrawer";
-console.log(styles)
+
 
 function Navbar(){
 

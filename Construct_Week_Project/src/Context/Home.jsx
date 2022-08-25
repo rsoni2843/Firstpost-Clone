@@ -6,7 +6,7 @@ import AllPages from '../Component/AllPages';
 
 
 function Home() {
-    const [endPoint,setEndPoint] = useState({category:"top",country:'in,us,jp,ae,gb'})
+    const [endPoint,setEndPoint] = useState({category:"general",country:'in'})
 
     
     
