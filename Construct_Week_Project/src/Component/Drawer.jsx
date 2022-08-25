@@ -19,7 +19,7 @@ import {
   
     return (
       <>
-      <Icon pr={1} ref={btnRef} colorScheme='teal' onClick={onOpen} as={HamburgerIcon} color="white" w={9} h={6} m='auto'/>
+      <Icon pr={1} ref={btnRef} onClick={onOpen} as={HamburgerIcon} colorScheme="white" w={9} h={6} m='auto'/>
         {/* <Button >
           Open
         </Button> */}

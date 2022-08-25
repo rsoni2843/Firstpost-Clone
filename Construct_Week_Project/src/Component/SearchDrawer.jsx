@@ -1,4 +1,5 @@
 import React from 'react'
+import { CgCloseO } from 'react-icons/cg';
 import { Search2Icon,CloseIcon} from '@chakra-ui/icons'
 import {
     Drawer,
@@ -21,26 +22,18 @@ function SearchDrawer() {
   
     return (
       <>
-        {/* <RadioGroup defaultValue={placement} onChange={setPlacement}>
-          <Stack direction='row' mb='4'>
-            <Radio value='top'>Top</Radio>
-            <Radio value='right'>Right</Radio>
-            <Radio value='bottom'>Bottom</Radio>
-            <Radio value='left'>Left</Radio>
-          </Stack>
-        </RadioGroup> */}
-        <Icon onClick={onOpen} m='auto' color='white' as={isOpen?CloseIcon:Search2Icon}/>
-        {/* <Button colorScheme='blue' onClick={onOpen}>
-          Open
-        </Button> */}
-        <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
-          <DrawerOverlay />
-          <DrawerContent>
+        
+        <Icon onClick={onOpen} m='auto' color='white' as={isOpen?CgCloseO:Search2Icon} cursor='pointer'/>
+        
+        <Drawer  size={'md'} placement={placement} onClose={onClose} isOpen={isOpen}>
           
-            <DrawerBody>
-             <Input w={3}/>
+          <DrawerContent w='85%' bgColor='black'>
+          
+            <DrawerBody  w='68%' display='flex' m='auto' color='white' bgColor='black'>
+            <Input textAlign='left' size={'xs'} p='12px' placeholder="Search"/>
             </DrawerBody>
-          </DrawerContent>
+          </DrawerContent> 
+          
         </Drawer>
       </>
     )

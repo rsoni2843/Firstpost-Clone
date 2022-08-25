@@ -2,7 +2,7 @@ import styles from './Context.module.css' ;
 
 
 const IndiaPage = ()=>{
-
+     
     return (
         <div className={styles.container}>
             <h1>INDIAAA</h1><br />

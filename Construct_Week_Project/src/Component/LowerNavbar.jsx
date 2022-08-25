@@ -6,38 +6,46 @@ const LowerNavbar = ()=>{
 
     const pages = [
         {
+            id:1,
             path:'/india',
             title:'India'
         },
-        {
+        {   id:2,
             path:'/world',
             title:'World'
         },
         {
+            id:3,
             path:'/politics',
             title:'Politics'
         },
         {
+            id:4,
             path:'/auto',
             title:'Auto'
         },
         {
+            id:5,
             path:'/opinion',
             title:'Opinion'
         },
         {
+            id:6,
             path:'/sports',
             title:'Sports'
         },
         {
+            id:7,
             path:'/cricket',
             title:'Cricket'
         },
         {
+            id:8,
             path:'/entertainment',
             title:'Entertainment'
         },
         {
+            id:9,
             path:'/tech',
             title:'Tech'
         }
@@ -50,7 +58,7 @@ const LowerNavbar = ()=>{
             <Box w="70%"  >
             <ul className={styles.container2}>
                 {pages.map((item)=>(
-                    <li ><NavLink
+                    <li key={item.id}><NavLink
                     className={({ isActive }) =>
                         isActive ? styles.active : styles.default
                     }
