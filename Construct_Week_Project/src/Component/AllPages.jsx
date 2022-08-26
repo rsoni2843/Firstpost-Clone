@@ -68,10 +68,10 @@ function AllPages({endPoint,pageName}){
                 </Box>
                 {/* Box2 */}
                 <Box border='1px solid black' w='30%'>
-                    <Box border={'1px solid black'}>
+                    <Box  border={'1px solid black'}>
                         <EmailSubscribe  />
                     </Box>
-                    <Box>
+                    <Box top='0px' position='sticky'>
                         <MostRead/>
                     </Box>
                 </Box>

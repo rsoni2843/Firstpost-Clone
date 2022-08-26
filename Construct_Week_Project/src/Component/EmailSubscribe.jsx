@@ -12,7 +12,7 @@ function EmailSubscribe() {
         </Box>
        <FormControl isRequired><FormLabel isRequired ml={'15px'}>Enter Email</FormLabel></FormControl> 
         <Input w='90%' border='0.1px solid grey' required placeholder='Enter Email'/>
-        <Button color='white' _hover={'yellow.350'} float={'left'} ml='18px' mt={'5px'} bgColor={'yellow.300'} size='sm' onClick={onToggle}>Subscriber</Button>
+        <Button color='white' _hover={'yellow.350'} mt={'5px'} bgColor={'yellow.300'} size='sm' onClick={onToggle}>Subscriber</Button>
        
         <Box>
         <Collapse in={isOpen} animateOpacity>
