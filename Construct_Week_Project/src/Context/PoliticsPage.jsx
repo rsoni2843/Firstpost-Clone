@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AllPages from '../Component/AllPages';
 import styles from './Context.module.css' ; 
 
 function PoliticsPage() {
+  const [endPoint,setEndPoint] = useState({category:"politics",country:'us'})
+
   return (
-    <div className={styles.container}>PoliticsPage</div>
+    <div className={styles.container}>
+      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+    </div>
   )
 }
 

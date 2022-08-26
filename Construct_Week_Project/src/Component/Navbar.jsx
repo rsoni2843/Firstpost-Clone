@@ -4,7 +4,6 @@ import styles from './Component.module.css' ;
 
 import { HamburgerIcon,Search2Icon} from '@chakra-ui/icons'
 import LowerNavbar from "./LowerNavbar";
-import DrawerExample from "./Drawer";
 import Draw from "./Draw";
 import SearchDrawer from "./SearchDrawer";
 

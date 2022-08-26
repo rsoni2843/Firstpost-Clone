@@ -2,6 +2,8 @@ import React from 'react' ;
 import { CgCloseO } from 'react-icons/cg'; 
 import {
     Drawer,
+    Text,
+    Box,
     DrawerBody,
     Stack,
     Radio,
@@ -16,6 +18,7 @@ import {
     DrawerCloseButton,
   } from '@chakra-ui/react' ;
   import { HamburgerIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
   
 
 function Draw() {
@@ -35,11 +38,48 @@ function Draw() {
             {/* <CgCloseO/> */}
           <DrawerCloseButton color='grey' rounded='50%' />
           
-            <DrawerHeader borderBottomWidth='1px'></DrawerHeader>
+            <DrawerHeader p={6} borderBottomWidth='1px'></DrawerHeader>
             <DrawerBody>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
-              <p>Some contents...</p>
+              <Box 
+              lineHeight={'50px'}>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                <Box borderBottomWidth={'2px'} ><Text 
+                fontWeight={'bold'} 
+                fontSize={'ms'} 
+                color={'black'} 
+                
+                ml={'28px'}><Link onClick={onClose} to={'/'}>Home</Link></Text></Box>
+                
+              </Box>
             </DrawerBody>
           </DrawerContent>
         </Drawer>

@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AllPages from '../Component/AllPages';
 import styles from './Context.module.css' ; 
 
 function CricketPage() {
-  
+  const [endPoint,setEndPoint] = useState({category:'sports',country:'in',query:null})
+
   return (
-    <div className={styles.container}>CricketPage</div>
+    <div className={styles.container}>
+      <AllPages pageName={'CRICKET'} endPoint={endPoint}/>
+    </div>
   )
 }
 

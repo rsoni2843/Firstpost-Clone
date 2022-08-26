@@ -1,90 +1,89 @@
 import React, { useState } from 'react'
 import {Box,Text} from '@chakra-ui/react' ; 
-import { useEffect } from 'react';
-import { getData } from '../../Api/api';
-
 function ImageSlider({data,img1,img2,img3}) {
-    console.log(img1)
+    
     return (
-        <div>
+        <div style={{marginTop:"30px"}}>
             <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
             
-            <div className=" carousel-inner">
+            <div  className=" carousel-inner">
                 <div  className="carousel-item active" data-bs-interval="10000">
-                <img src={img1.urlToImage} className=" w-100" alt="..."/>
+                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img1.urlToImage} className=" w-100" alt="..."/>
 
                 <div  className="  carousel-caption ">
                     <Box bgColor='white'>
-                        <Text>{img1.title}</Text>
+                        <Text 
+                        
+                        fontFamily={"fantasy"} 
+                        textDecoration={'underline'} 
+                        textDecorationColor='yellow.300' 
+                        textDecorationThickness={3} 
+                        textAlign={'left'}>
+                            TOP HEADLINE</Text>
+                        <Text 
+                        fontWeight={'700'} 
+                        fontFamily={"Playfair Display"} 
+                        fontSize={'xl'}
+                        textAlign={'left'}>{img1.title}</Text>
                     </Box>
                 </div>
                 </div>
             <div className="carousel-item" data-bs-interval="10000">
-                <img src={img2.urlToImage} className=" w-100" alt="..."/>
+                <img style={{maxHeight:"390px",minHeight:"400px" }} src={img2.urlToImage} className=" w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
-                    <Box bgColor='white'>
-                        <Text>{img2.title}</Text>
+                    <Box width='100%' bgColor='white'>
+                        <Text
+                        fontFamily={"fantasy"}
+                        textDecoration={'underline'} 
+                        textDecorationColor='yellow.300' 
+                        textDecorationThickness={3} 
+                        textAlign={'left'}>TOP HEADLINE</Text>
+                        <Text 
+                        
+                        fontWeight={'700'}  
+                        fontFamily={"Playfair Display"} 
+                        textAlign={'left'} 
+                        fontSize={'2xl'}>
+                            {img2.title}</Text>
                     </Box>
                 </div>
                 </div>
-                <div data-bs-interval="10000" className="carousel-item">
-                <img src={img3.urlToImage} className="w-100" alt="..."/>
+                <div style={{maxHeight:"390px"}} data-bs-interval="10000" className="carousel-item">
+                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img3.urlToImage} className="w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                     <Box bgColor='white'>
-                        <Text>{img3.title}</Text>
+                        <Text 
+                        textDecoration={'underline'} 
+                        textDecorationColor='yellow.300' 
+                        textDecorationThickness={3} 
+                        
+                        fontFamily={"fantasy"}   
+                        textAlign={'left'}>TOP HEADLINE</Text>
+                        <Text 
+                        fontWeight={'700'} 
+                        
+                        fontFamily={"Playfair Display"} 
+                        fontSize={'2xl'}
+                        // style={{font: 700 24px/27px 'Playfair Display',sans-serif}}
+                        textAlign={'left'}>{img3.title}</Text>
                     </Box>
                 </div>
                 </div>
+                <Box>
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="text-danger active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+                </Box>
             </div>
         </div>
     
-</div>
+    </div>
     )
     
 
   
-    // <div>
-        
-    //     <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-        
-    //     <div  className=" carousel-inner">
-    //         <div  className="carousel-item active" data-bs-interval="10000">
-    //         <img  className=" w-100" alt="..."/>
-            
-    //         <div  className="  carousel-caption ">
-    //             <Box bgColor='white'>
-    //                 <Text></Text>
-    //             </Box>
-    //         </div>
-    //         </div>
-    //         <div className="carousel-item" data-bs-interval="2000">
-    //         <img  className=" w-100" alt="..."/>
-    //         <div className="carousel-caption d-none d-md-block">
-    //             <h5>Second slide label</h5>
-    //             <p>Some representative placeholder content for the second slide.</p>
-    //         </div>
-    //         </div>
-    //         <div className="carousel-item">
-    //         <img  className="w-100" alt="..."/>
-    //         <div className="carousel-caption d-none d-md-block">
-    //             <h5>Third slide label</h5>
-    //             <p>Some representative placeholder content for the third slide.</p>
-    //         </div>
-    //         </div>
-    //         <div className="carousel-indicators">
-    //             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="text-danger active" aria-current="true" aria-label="Slide 1"></button>
-    //             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    //             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    //         </div>
-    //     </div>
-    // </div>
-        
-    // </div>
   
 }
 

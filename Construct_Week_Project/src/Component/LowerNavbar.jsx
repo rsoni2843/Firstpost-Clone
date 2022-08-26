@@ -21,13 +21,13 @@ const LowerNavbar = ()=>{
         },
         {
             id:4,
-            path:'/auto',
-            title:'Auto'
+            path:'/science',
+            title:'Science'
         },
         {
             id:5,
-            path:'/opinion',
-            title:'Opinion'
+            path:'/business',
+            title:'Business'
         },
         {
             id:6,

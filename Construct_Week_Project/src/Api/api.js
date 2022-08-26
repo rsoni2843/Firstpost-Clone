@@ -14,15 +14,24 @@
 import axios from 'axios' ; 
 
 // const apiKey = "31e70d767f2542bebb0d276fc0210730" ; 
-const apiKey = "b831b295c0d4462880f6889d41ca62d3" ; 
-
+const apiKey = "863e4466318e4fdb94d0f95e537bcd85" ; 
+// const apiKey = "b831b295c0d4462880f6889d41ca62d3" ; 
+    // `https://newsapi.org/v2/everything?q=bitcoin&apiKey=`
 export function getData({endPoint}){
     console.log(endPoint)
     return axios.get(`https://newsapi.org/v2/top-headlines?apiKey=${apiKey}`,{
         params:{
             category:endPoint.category,
-            country:endPoint.country
+            country:endPoint.country,
+            pageSize:40,
+            q:endPoint.query
         }
+    })
+}
+
+export function getData2(){
+    return axios.get(`https://newsapi.org/v2/top-headlines?perPage=7&sources=bbc-news&apiKey=${apiKey}`,{
+        
     })
 }
 

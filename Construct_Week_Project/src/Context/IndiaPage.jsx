@@ -1,14 +1,14 @@
+import { useState } from 'react';
+import AllPages from '../Component/AllPages';
 import styles from './Context.module.css' ; 
 
 
 const IndiaPage = ()=>{
-     
+    const [endPoint,setEndPoint] = useState({category:"general",country:'in',query:null})
+
     return (
         <div className={styles.container}>
-            <h1>INDIAAA</h1><br />
-            <h1>JAJAJJAJAJAJ</h1>
-            <br />
-            <h1>JAJJAJAJJAJKFJKFJ</h1>
+            <AllPages pageName={'INDIA'} endPoint={endPoint}/>
         </div>
     )
 }

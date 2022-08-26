@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import AllPages from '../Component/AllPages';
 import styles from './Context.module.css' ; 
 
 function WorldPage() {
+  const [endPoint,setEndPoint] = useState({category:"general",country:'us'})
+
   return (
-    <div className={styles.container}>WorldPage</div>
+    <div className={styles.container}>
+      <AllPages pageName={'WORLD'} endPoint={endPoint}/>
+    </div>
   )
 }
 
