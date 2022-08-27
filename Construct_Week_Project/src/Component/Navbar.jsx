@@ -1,5 +1,5 @@
 
-import { Box, Image,Icon,Flex, Link } from "@chakra-ui/react";
+import { Box, Image,Icon,Flex, Link, position } from "@chakra-ui/react";
 import styles from './Component.module.css' ; 
 
 import { HamburgerIcon,Search2Icon} from '@chakra-ui/icons'
@@ -11,7 +11,7 @@ import SearchDrawer from "./SearchDrawer";
 function Navbar(){
 
     return (
-        <div>
+        <div style={{top:"0",zIndex:"2", position:'sticky'}}>
             <Box className={styles.container}>
                {/* <Icon  as={HamburgerIcon} color="white" w={8} h={8} m='auto'/> */}
                 {/* <Box mr='22%' mt={1.5} w={3} h={3} cursor={'pointer'}> <DrawerExample/></Box> */}

@@ -16,21 +16,21 @@ function MostRead(){
         })
     },[]) ; 
    
-    console.log(data)
     return (
-        <div /*style={{position:'sticky',top:'0px'}}*/>
+        <div >
             <Box border={'1px solid black'}>
                 <Text textAlign={'left'}  fontSize='2xl'  ml='15px'fontWeight={'bold'} fontFamily={'arial'} textDecoration='underline' textDecorationColor='yellow.300' textDecorationThickness={3} fontStyle={'italic'}>Most Read</Text>
             </Box>
             <Box  border={'1px solid black'}>
-                {data?.map((item)=>{
-                    return <Box display={'flex'} borderWidth={'1px'}>
-                        <Box w='10%'>
-                            <Text>a</Text>
+                {data?.map((item,i)=>{
+                    
+                    return <Box  p='10px' display={'flex'} borderWidth={'1px'}>
+                        <Box mt='-20px' w='10%'>
+                            <Text  textAlign={'left'} fontSize={'3xl'} fontWeight={'bold'} fontFamily={'Playfair Display'}>{i+1}</Text>
                         </Box>
                         <Box w='90%'>
-                            <Text fontFamily={'Playfair Display'} fontSize={'medium'} fontWeight={'bold'}>{item.title}</Text>
-                            <Text>{item.description}</Text>
+                            <Text lineHeight={7} textAlign="left" fontFamily={'Playfair Display'} fontSize={'xl'} fontWeight={'700'}>{item.title}</Text>
+                            <Text color='blackAlpha.900' textAlign={'left'} fontSize={'small'}>{item.description}</Text>
                         </Box>
                         
                     </Box>

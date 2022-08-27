@@ -8,7 +8,7 @@ function ImageSlider({data,img1,img2,img3}) {
             
             <div  className=" carousel-inner">
                 <div  className="carousel-item active" data-bs-interval="10000">
-                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img1.urlToImage} className=" w-100" alt="..."/>
+                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img1.urlToImage?img1.urlToImage:'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'} className=" w-100" alt="..."/>
 
                 <div  className="  carousel-caption ">
                     <Box bgColor='white'>
@@ -29,7 +29,7 @@ function ImageSlider({data,img1,img2,img3}) {
                 </div>
                 </div>
             <div className="carousel-item" data-bs-interval="10000">
-                <img style={{maxHeight:"390px",minHeight:"400px" }} src={img2.urlToImage} className=" w-100" alt="..."/>
+                <img style={{maxHeight:"390px",minHeight:"400px" }} src={img2.urlToImage?img2.urlToImage:'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'} className=" w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                     <Box width='100%' bgColor='white'>
                         <Text
@@ -49,7 +49,7 @@ function ImageSlider({data,img1,img2,img3}) {
                 </div>
                 </div>
                 <div style={{maxHeight:"390px"}} data-bs-interval="10000" className="carousel-item">
-                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img3.urlToImage} className="w-100" alt="..."/>
+                <img style={{maxHeight:"390px",minHeight:"400px"}} src={img3.urlToImage?img3.urlToImage:'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'} className="w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                     <Box bgColor='white'>
                         <Text 

@@ -4,6 +4,8 @@ import { Box, Flex, Progress, Text, Image,Input,Button, useDisclosure, Alert } f
 import ImageSlider from './Slider/ImageSlider';
 import EmailSubscribe from './EmailSubscribe';
 import MostRead from './MostRead';
+import Paginations from './Pagenation';
+import { useSearchParams } from 'react-router-dom';
 
 
 
@@ -14,6 +16,12 @@ function AllPages({endPoint,pageName}){
         onClose,
         onOpen,
       } = useDisclosure({ defaultIsOpen: true })
+    const [page,setPage] = useState([]) ; 
+    // const [current,setCurrent] = useState(1) ;
+    const [searchParams,setSearchParams] = useSearchParams() ;
+    const initPage = Number(searchParams.get("page")||1) ; 
+
+    const [current,setCurrent] = useState(initPage)  ; 
     const [data,setData] = useState([]) ; 
     const [image,setImage] = useState([]) ; 
     const [i1,setI1] = useState({})
@@ -21,18 +29,25 @@ function AllPages({endPoint,pageName}){
     const [i3,setI3] = useState({})
     useEffect(()=>{
         handleGetData() ; 
-    },[]) ; 
+    },[current]) ; 
     function handleGetData(){
-        return getData({endPoint})
+        return getData({endPoint,current})
         .then(res=>{
             // console.log(res) ;
-            setI1(res.data.articles[0])
-            setI2(res.data.articles[1])
-            setI3(res.data.articles[2])
-            setImage(res.data.articles)
+            setPage(res.data.totalResults) ; 
+            setI1(res.data.articles[0]) ; 
+            setI2(res.data.articles[1]) ; 
+            setI3(res.data.articles[2]) ; 
+            setImage(res.data.articles) ; 
             setData(res.data.articles) ; 
         })
         .catch(err=>{console.log(err)})
+    }
+    useEffect(()=>{
+        setSearchParams({current}) ; 
+    },[current,setSearchParams]) ; 
+    const onChange = (currentPage) => {
+        setCurrent(currentPage)
     }
     // console.log(data) 
     return (
@@ -40,7 +55,7 @@ function AllPages({endPoint,pageName}){
         
         <div>
             
-            <Flex minH='500px' w='75%' m='auto' border='1px solid black'>
+            <Flex  w='75%' m='auto' border='1px solid black'>
                 {/* Box1 */}
                 <Box border='1px solid black' w='65%'>
                     <Text textTransform={'uppercase'} fontSize={30} fontWeight={'bold'}>{pageName} News</Text>
@@ -53,7 +68,7 @@ function AllPages({endPoint,pageName}){
     
                     <ImageSlider  img1={i1} img3={i2} img2={i3} data={image}/>
 
-                    <Box mt={20}>
+                    <Box mt={5}>
                         {data?.map((item)=>{
                             return <Box pos={'relative'} mt={'100px'} key={item.author}>
                                 <Image minH={'400px'} w={"100%"}  src={item.urlToImage?item.urlToImage:'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'} alt={item.author?item.author:"No Image"}/>
@@ -67,16 +82,17 @@ function AllPages({endPoint,pageName}){
                     </Box>
                 </Box>
                 {/* Box2 */}
-                <Box border='1px solid black' w='30%'>
+                <Box ml={5} border='1px solid black' w='30%'>
                     <Box  border={'1px solid black'}>
                         <EmailSubscribe  />
                     </Box>
-                    <Box top='0px' position='sticky'>
-                        <MostRead/>
+                    <Box mt={20} top='30px' scrollBehavior={'smooth'} position='sticky'>
+                        <MostRead />
                     </Box>
                 </Box>
-
+                       
             </Flex>
+             <Paginations changingPage={onChange} currentPage={current} pageData = {page} />
         </div>
     )
 }

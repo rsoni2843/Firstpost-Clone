@@ -7,7 +7,7 @@ function CryptoPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages  endPoint={endPoint}/>
+      <AllPages pageName={endPoint.query} endPoint={endPoint}/>
     </div>
   )
 }
