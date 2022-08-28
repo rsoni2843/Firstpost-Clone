@@ -8,7 +8,7 @@ const IndiaPage = ()=>{
 
     return (
         <div className={styles.container}>
-            <AllPages pageName={'INDIA'} endPoint={endPoint}/>
+            <AllPages pageName={'India'} endPoint={endPoint}/>
         </div>
     )
 }

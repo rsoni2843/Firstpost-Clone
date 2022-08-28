@@ -1,6 +1,7 @@
 import { Pagination } from 'antd';
 import React, { useState } from 'react';
 import 'antd/dist/antd.css';
+import {yellow} from '@ant-design/colors'
 import { Box } from '@chakra-ui/react';
 // const onShowSizeChange = (current, pageSize) => {
 //   console.log(current, pageSize);
@@ -8,11 +9,11 @@ import { Box } from '@chakra-ui/react';
 
 const Paginations = ({pageData,currentPage,changingPage}) => {
     // console.log(currentPage)
-    console.log(pageData)
+    // console.log(pageData)
     // console.log(current)
     return (
-        <Box mt={110} >
-            <Pagination  onChange={changingPage}  defaultCurrent={currentPage} total={pageData} pageSize={21}/>
+        <Box  mt={110} >
+            <Pagination onChange={changingPage}  defaultCurrent={currentPage} total={pageData} pageSize={20}/>
 
         </Box>
     )

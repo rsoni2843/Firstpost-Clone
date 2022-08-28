@@ -18,13 +18,13 @@ function MostRead(){
    
     return (
         <div >
-            <Box border={'1px solid black'}>
+            <Box >
                 <Text textAlign={'left'}  fontSize='2xl'  ml='15px'fontWeight={'bold'} fontFamily={'arial'} textDecoration='underline' textDecorationColor='yellow.300' textDecorationThickness={3} fontStyle={'italic'}>Most Read</Text>
             </Box>
-            <Box  border={'1px solid black'}>
+            <Box  border={'1px solid #C8C8C8'}>
                 {data?.map((item,i)=>{
                     
-                    return <Box  p='10px' display={'flex'} borderWidth={'1px'}>
+                    return <Box key={i}  p='10px' display={'flex'} borderWidth={'1px'}>
                         <Box mt='-20px' w='10%'>
                             <Text  textAlign={'left'} fontSize={'3xl'} fontWeight={'bold'} fontFamily={'Playfair Display'}>{i+1}</Text>
                         </Box>

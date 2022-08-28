@@ -7,7 +7,7 @@ function SciencePage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+      <AllPages pageName={'Science'} endPoint={endPoint}/>
     </div>
   )
 }

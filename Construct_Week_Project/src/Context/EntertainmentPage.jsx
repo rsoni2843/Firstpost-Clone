@@ -7,7 +7,7 @@ function EntertainmentPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+      <AllPages pageName={'Entertainment'} endPoint={endPoint}/>
     </div>
   )
 }

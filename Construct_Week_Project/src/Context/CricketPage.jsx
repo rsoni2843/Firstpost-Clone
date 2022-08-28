@@ -7,7 +7,7 @@ function CricketPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={'CRICKET'} endPoint={endPoint}/>
+      <AllPages pageName={'Cricket'} endPoint={endPoint}/>
     </div>
   )
 }

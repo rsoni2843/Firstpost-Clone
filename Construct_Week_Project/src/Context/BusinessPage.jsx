@@ -7,7 +7,7 @@ function BusinessPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+      <AllPages pageName={'Business'} endPoint={endPoint}/>
     </div>
   )
 }

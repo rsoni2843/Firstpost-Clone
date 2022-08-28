@@ -13,13 +13,15 @@
 // }
 import axios from 'axios' ; 
 
-const apiKey = "31e70d767f2542bebb0d276fc0210730" ; 
+// const apiKey = "31e70d767f2542bebb0d276fc0210730" ; 
+const apiKey = "b5eddb8f032a450d841c215e4cc33d4f" ; 
 // const apiKey = "863e4466318e4fdb94d0f95e537bcd85" ; 
+// const apiKey = "863e4466318e4fdb94d0f95e537bcd85" ; 
+// const apiKey = "20691abc5ccf42ab8a256c232b41cc45" ; 
 // const apiKey = "b831b295c0d4462880f6889d41ca62d3" ; 
     // `https://newsapi.org/v2/everything?q=bitcoin&apiKey=`
 export function getData({endPoint,current}){
-    console.log(endPoint) ; 
-    console.log(current)
+    
     return axios.get(`https://newsapi.org/v2/top-headlines?apiKey=${apiKey}`,{
         params:{
             category:endPoint.category,
@@ -37,4 +39,11 @@ export function getData2(){
     })
 }
 
-
+export function getSinglePageData(id){
+    return fetch(`https://newsapi.org/v2/everything?q=${id}/&apiKey=${apiKey}`)
+    .then(res=>res.json()) 
+}
+// function getSinglePageData(id){
+//     return fetch(`https://newsapi.org/v2/everything?q=${id}/&apiKey=${apiKey}`)
+//     .then(res=>res.json()) 
+// }

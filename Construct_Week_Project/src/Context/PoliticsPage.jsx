@@ -7,7 +7,7 @@ function PoliticsPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+      <AllPages pageName={'Politics'} endPoint={endPoint}/>
     </div>
   )
 }

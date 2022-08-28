@@ -10,6 +10,7 @@ import TechPage from './TechPage';
 import WorldPage from './WorldPage';
 import SciencePage from './SciencePage';
 import BusinessPage from './BusinessPage';
+import SingleNewsPage from '../Component/SingleNewsPage/SingleNewsPage';
 
 
 function AllRoutes(){
@@ -20,6 +21,7 @@ function AllRoutes(){
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/india' element={<IndiaPage/>}/>
+                <Route path='/india/news/:id' element={<SingleNewsPage/>}/>
                 <Route path='/world' element={<WorldPage/>}/>
                 <Route path='/politics' element={<PoliticsPage/>}/>
                 <Route path='/science' element={<SciencePage/>}/>
@@ -29,6 +31,16 @@ function AllRoutes(){
                 <Route path='/entertainment' element={<EntertainmentPage/>}/>
                 <Route path='/tech' element={<TechPage/>}/>
                 <Route path='/crypto' element={<CryptoPage/>}/>
+                <Route path='/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/world/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/politics/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/science/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/business/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/sports/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/cricket/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/entertainment/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/tech/news/:id' element={<SingleNewsPage/>}/>
+                <Route path='/crypto/news/:id' element={<SingleNewsPage/>}/>
             </Routes>
         </div>
     )

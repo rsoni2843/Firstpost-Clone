@@ -7,7 +7,7 @@ function WorldPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={'WORLD'} endPoint={endPoint}/>
+      <AllPages pageName={'World'} endPoint={endPoint}/>
     </div>
   )
 }

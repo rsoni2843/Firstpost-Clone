@@ -8,7 +8,7 @@ function TechPage() {
 
   return (
     <div className={styles.container}>
-      <AllPages pageName={endPoint.category} endPoint={endPoint}/>
+      <AllPages pageName={'Technology'} endPoint={endPoint}/>
     </div>
   )
 }
