@@ -14,13 +14,29 @@ import {
     Icon,
     DrawerContent,
     DrawerCloseButton,
+    Box,
   } from '@chakra-ui/react'
+import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function SearchDrawer() {
+  const navigate = useNavigate()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('top')
     const [value,setValue] = useState("") ; 
-
+    
+    
+    // useEffect(()=>{
+    //   handleKeyDown() ; 
+    // },[])
+    
+    const handleKeyDown = (e)=>{
+      if(e.key === "Enter"){
+        console.log(value) ; 
+        navigate(`news/${value}`)
+      }
+    }
+    console.log(value)
     return (
       <>
         
@@ -31,7 +47,18 @@ function SearchDrawer() {
           <DrawerContent w='85%' bgColor='black'>
           
             <DrawerBody  w='68%' display='flex' m='auto' color='white' bgColor='black'>
-            <Input value={value}  textAlign='left' size={'xs'} p='12px' placeholder="Search"/>
+              {/* <Link>
+              
+              </Link> */}
+                <Input  id="one" onChange={((e)=>setValue(e.target.value))} value={value} onKeyDown={handleKeyDown}  textAlign='left' size={'xs'} p='12px' placeholder="Search"/>
+              {/* <Box>
+                <Link to={`news/${value}`}></Link>
+              </Box> */}
+              {/* <Box>
+              <Link to={`news/${value}`}>
+                
+                </Link>
+              </Box> */}
             </DrawerBody>
           </DrawerContent> 
           

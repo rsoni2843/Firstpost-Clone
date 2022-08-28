@@ -7,7 +7,7 @@ import CurrentPage from '../CurrentPage';
 import EmailSubscribe from '../EmailSubscribe';
 import Footer from '../Footer';
 import MostRead from '../MostRead';
-const apiKey = "20691abc5ccf42ab8a256c232b41cc45" ; 
+// const apiKey = "20691abc5ccf42ab8a256c232b41cc45" ; 
 
 function SingleNewsPage() {
     const [data,setData] = useState([]) ; 
