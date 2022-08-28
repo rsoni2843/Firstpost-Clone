@@ -1,6 +1,6 @@
 import { getData } from '../Api/api';
 import { useEffect, useState } from 'react';
-import { Box, Flex, Progress, Text, Image,Input,Button, useDisclosure, Alert, VisuallyHidden } from '@chakra-ui/react';
+import { Box, Flex, Progress, Text, Image,Input,Button, useDisclosure, Alert, VisuallyHidden, Skeleton } from '@chakra-ui/react';
 import ImageSlider from './Slider/ImageSlider';
 import EmailSubscribe from './EmailSubscribe';
 import MostRead from './MostRead';
@@ -21,6 +21,8 @@ function AllPages({endPoint,pageName}){
       } = useDisclosure({ defaultIsOpen: true })
     const [page,setPage] = useState([]) ; 
     // const [current,setCurrent] = useState(1) ;
+    const [loading,setLoading] = useState(false) ; 
+
     const [searchParams,setSearchParams] = useSearchParams() ;
     const initPage = Number(searchParams.get("page")||1) ; 
 
@@ -34,9 +36,11 @@ function AllPages({endPoint,pageName}){
         handleGetData() ; 
     },[current]) ; 
     function handleGetData(){
+        setLoading(true) ; 
         return getData({endPoint,current})
         .then(res=>{
-            console.log(res) ;
+            setLoading(false)
+            // console.log(res) ;
             setPage(res.data.totalResults) ; 
             setI1(res.data.articles[0]) ; 
             setI2(res.data.articles[1]) ; 
@@ -44,7 +48,9 @@ function AllPages({endPoint,pageName}){
             setImage(res.data.articles) ; 
             setData(res.data.articles) ; 
         })
-        .catch(err=>{console.log(err)})
+        .catch(err=>{
+            setLoading(false)
+            console.log(err)})
     }
     useEffect(()=>{
         setSearchParams({current}) ; 
@@ -52,11 +58,24 @@ function AllPages({endPoint,pageName}){
     const onChange = (currentPage) => {
         setCurrent(currentPage)
     }
-    console.log(data) 
+    // console.log(data) 
+    // if(loading){
+    //     return <div>
+    //         <Skeleton height='50px' />
+    //     </div>
+    // }
+    if(loading){
+        return <div>
+            <Skeleton colorScheme={'grey.200'} h={"600px"}/>
+                
+            
+        </div>
+    }
     return (
 
         
         <div>
+            
             <CurrentPage pageName={pageName}/>
             <Flex  w='75%' m='auto' >
 
@@ -96,9 +115,10 @@ function AllPages({endPoint,pageName}){
                        
             </Flex>
              <Paginations changingPage={onChange} currentPage={current} pageData = {page} />
-             <div style={'2px solid black'}></div>
-
+             {/* <div style={'2px solid black'}></div> */}
+                        <Box mt={5} mb={3} height={2} bgColor={'#585858'}></Box>
              <Footer />
+             
         </div>
     )
 }

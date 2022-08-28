@@ -7,7 +7,7 @@ import CurrentPage from '../CurrentPage';
 import EmailSubscribe from '../EmailSubscribe';
 import Footer from '../Footer';
 import MostRead from '../MostRead';
-const apiKey = "20691abc5ccf42ab8a256c232b41cc45" ; 
+// const apiKey = "20691abc5ccf42ab8a256c232b41cc45" ; 
 
 function SingleNewsPage() {
     const [data,setData] = useState([]) ; 
@@ -49,13 +49,14 @@ function SingleNewsPage() {
                     </Box>
                 })}
             </Box>
-            <Box w={'35%'}>
+            <Box ml={5} w={'35%'}>
             <Box >
                         <EmailSubscribe  />
                     </Box>
                     <MostRead style={{marginLeft:"4px"}}/>
             </Box>
         </Flex>
+        <Box mt={5} mb={3} height={2} bgColor={'#585858'}></Box>
         <Footer/>
     </div>
   )
