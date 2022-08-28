@@ -96,8 +96,8 @@ function AllPages({endPoint,pageName}){
                        
             </Flex>
              <Paginations changingPage={onChange} currentPage={current} pageData = {page} />
-             <div style={'2px solid black'}></div>
-
+             {/* <div style={'2px solid black'}></div> */}
+                        <Box mt={5} mb={3} height={2} bgColor={'#585858'}></Box>
              <Footer />
         </div>
     )

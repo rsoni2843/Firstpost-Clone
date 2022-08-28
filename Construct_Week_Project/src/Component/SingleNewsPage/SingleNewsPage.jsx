@@ -49,13 +49,14 @@ function SingleNewsPage() {
                     </Box>
                 })}
             </Box>
-            <Box w={'35%'}>
+            <Box ml={5} w={'35%'}>
             <Box >
                         <EmailSubscribe  />
                     </Box>
                     <MostRead style={{marginLeft:"4px"}}/>
             </Box>
         </Flex>
+        <Box mt={5} mb={3} height={2} bgColor={'#585858'}></Box>
         <Footer/>
     </div>
   )

@@ -180,25 +180,25 @@ function Footer() {
             <Box w={"25%"} border={'0.5px solid #c8c8c8'}>
                 <Text ml={5} textAlign={'left'} fontFamily={'arial'} fontWeight={'800'}>Firstpost</Text>
                 {Firstpost?.map((item,index)=>{
-                    return <Link key={index} href={item.path}><Text  ml={5} lineHeight={6} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
+                    return <Link key={index} href={item.path}><Text  ml={5} lineHeight={3} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
                 })}
             </Box>
             <Box w={"25%"} border={'1px solid #c8c8c8'}>
                 <Text fontFamily={'arial'} ml={5} textAlign={'left'} fontWeight={'800'}>Section</Text>
                 {Section.map((item,index)=>{
-                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={6} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
+                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={3} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
                 })}
             </Box>
             <Box w={"25%"} border={'1px solid #c8c8c8'}>
                 <Text fontFamily={'arial'} fontWeight={'800'} ml={5} textAlign={'left'}>Plus</Text>
                 {Plus.map((item,index )=>{
-                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={6} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
+                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={3} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
                 })}
             </Box>
             <Box w={"25%"} border={'1px solid #c8c8c8'}>
                 <Text ml={5} textAlign={'left'} fontFamily={'arial'} fontWeight={'800'}>Apps</Text>
                 {Apps.map((item,index)=>{
-                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={6} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
+                    return <Link key={index} href={item.path}><Text ml={5} lineHeight={3} textAlign='left' fontFamily={'arial'} fontSize={11}>{item.title}</Text></Link>
                 })}
             </Box>
         </Flex>

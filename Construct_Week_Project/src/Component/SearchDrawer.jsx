@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CgCloseO } from 'react-icons/cg';
 import { Search2Icon,CloseIcon} from '@chakra-ui/icons'
 import {
@@ -19,7 +19,8 @@ import {
 function SearchDrawer() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [placement, setPlacement] = React.useState('top')
-  
+    const [value,setValue] = useState("") ; 
+
     return (
       <>
         
@@ -30,7 +31,7 @@ function SearchDrawer() {
           <DrawerContent w='85%' bgColor='black'>
           
             <DrawerBody  w='68%' display='flex' m='auto' color='white' bgColor='black'>
-            <Input textAlign='left' size={'xs'} p='12px' placeholder="Search"/>
+            <Input value={value}  textAlign='left' size={'xs'} p='12px' placeholder="Search"/>
             </DrawerBody>
           </DrawerContent> 
           
