@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Netmeds Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+Netmeds Marketplace Limited operates as an online pharmacy. TheCompany offers eyewear, fitness, personal care, prescribed medicines, and health products.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- All the latest news related to all the categories on the homepage.
+- Slider on the page highlighting the latest current latest news.
+- Get news from the different categories from the section given on the navbar
+- Sidebar where you can choose the news from the different categories and get access to the social media handles of the website.
+- Paginate the pages if you want to move from first page to the second page and so on.
+- Single news page where you the get the deatiled article related to the news which you searched for.
+- Search bar on the top of navbar where you can search the news according to whatever news you want to search for.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Landing Page(Slider with latest news)
+![App Screenshot](https://i.postimg.cc/cCqfz2K1/Screenshot-2022-12-29-002505.png)
 
-### `npm test`
+News Articles
+![App Screenshot](https://i.postimg.cc/VvGmvQjm/Screenshot-2022-12-29-002505.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pagination
+![App Screenshot](https://i.postimg.cc/wv1S2yJ8/Screenshot-2022-12-29-002505.png)
 
-### `npm run build`
+Footer
+![App Screenshot](https://i.postimg.cc/CKk8qJPW/Screenshot-2022-12-29-002505.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Drawer
+![App Screenshot](https://i.postimg.cc/1zrtSdY5/Screenshot-2022-12-29-003525.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+News Categories
+![App Screenshot](https://i.postimg.cc/LXjGGdyN/Screenshot-2022-12-29-003525.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Search bar dropdown
+![App Screenshot](https://i.postimg.cc/CxDCGFdP/Screenshot-2022-12-29-003525.png)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Single news page with the related article
+![App Screenshot](https://i.postimg.cc/yYTvJmpQ/Screenshot-2022-12-29-003525.png)
