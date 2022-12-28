@@ -1,8 +1,8 @@
-# Netmeds Clone
+# Firstpost Clone
 
 ## About
 
-Netmeds Marketplace Limited operates as an online pharmacy. TheCompany offers eyewear, fitness, personal care, prescribed medicines, and health products.
+Firstpost is an Indian online news and media website. Firstpost is a part of the Network 18 media conglomerate owned by Reliance Industries.
 
 ## Features
 
