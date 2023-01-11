@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
+import image from "../dummy.png";
 function ImageSlider({ data, img1, img2, img3 }) {
   return (
     <div style={{ marginTop: "30px" }}>
@@ -12,11 +13,7 @@ function ImageSlider({ data, img1, img2, img3 }) {
           <div className="carousel-item active" data-bs-interval="10000">
             <img
               style={{ maxHeight: "390px", minHeight: "400px" }}
-              src={
-                img1?.image_url
-                  ? img1?.image_url
-                  : "https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
-              }
+              src={img1?.image_url ? img1?.image_url : image}
               className=" w-100"
               alt="..."
             />
@@ -46,11 +43,7 @@ function ImageSlider({ data, img1, img2, img3 }) {
           <div className="carousel-item" data-bs-interval="10000">
             <img
               style={{ maxHeight: "390px", minHeight: "400px" }}
-              src={
-                img2.image_url
-                  ? img2.image_url
-                  : "https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
-              }
+              src={img2.image_url ? img2.image_url : image}
               className=" w-100"
               alt="..."
             />
@@ -83,11 +76,7 @@ function ImageSlider({ data, img1, img2, img3 }) {
           >
             <img
               style={{ maxHeight: "390px", minHeight: "400px" }}
-              src={
-                img3.image_url
-                  ? img3?.image_url
-                  : "https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
-              }
+              src={img3.image_url ? img3?.image_url : image}
               className="w-100"
               alt="..."
             />

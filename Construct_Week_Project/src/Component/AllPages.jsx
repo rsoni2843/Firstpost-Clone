@@ -7,9 +7,9 @@ import {
   Text,
   Image,
   Skeleton,
-  Stack,
   Hide,
 } from "@chakra-ui/react";
+import img from "./dummy.png";
 import ImageSlider from "./Slider/ImageSlider";
 import EmailSubscribe from "./EmailSubscribe";
 import MostRead from "./MostRead";
@@ -86,7 +86,7 @@ function AllPages({ endPoint, pageName }) {
             </Box>
           </Box>
           <Hide below={"md"}>
-            <ImageSlider img1={i1} img3={i2} img2={i3} data={image} />
+            <ImageSlider img1={i1} img3={i2} img2={i3} data={img} />
           </Hide>
           <Box mt={5}>
             {data?.map((item, index) => {
@@ -100,11 +100,7 @@ function AllPages({ endPoint, pageName }) {
                     <Image
                       minH={{ md: "400px", base: "100%" }}
                       w={"100%"}
-                      src={
-                        item?.image_url
-                          ? item?.image_url
-                          : "https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg"
-                      }
+                      src={item?.image_url ? item?.image_url : img}
                       alt={item.source_id ? item.source_id : "No Image"}
                     />
                     <Box
