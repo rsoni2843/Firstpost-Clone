@@ -38,7 +38,7 @@ let api = `https://newsdata.io/api/1/news?apikey=${apiKey}`;
 // https://api.allorigins.win/raw?url=${encodeURIComponent(paymentOfferAPI)}
 export function getData({ endPoint, current }) {
   console.log("CHECK", endPoint, current);
-  return axios.get(`https://cors-anywhere.herokuapp.com/${api}`, {
+  return axios.get(`${api}`, {
     params: {
       category: endPoint.category,
       country: endPoint.country,

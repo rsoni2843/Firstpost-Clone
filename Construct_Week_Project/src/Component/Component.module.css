@@ -1,36 +1,62 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
+}
+.container2 {
+  font-size: 13px;
 
-.container{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: black;
+  justify-content: space-between;
+  margin: auto;
 }
-.container2{
-    font-size: 13px;
-    
-    justify-content: space-between;
-    margin: auto;
+.container2 li {
+  display: inline;
+  /* margin-bottom: 10px; */
+  text-align: center;
 }
-.container2 li{
-    display: inline;
-    /* margin-bottom: 10px; */
-    text-align: center;
-    
+.container2 li a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid rgb(246, 92, 64);
 }
-.container2 li a:hover{
-    cursor: pointer;
-    border-bottom: 2px solid rgb(246, 92, 64);
+.container2 li a {
+  /* margin-top: 20px; */
+  border-right: 1px solid rgb(203, 195, 195);
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-bottom: 6px;
+  /* margin-right: 2px; */
 }
-.container2 li a{
-    /* margin-top: 20px; */
-    border-right: 1px solid rgb(203, 195, 195);
-    padding-right: 20px;
-    padding-left: 10px;
-    padding-bottom: 6px;
-    /* margin-right: 2px; */
+.active {
+  border-bottom: 2px solid tomato;
 }
-.active{
-    border-bottom: 2px solid tomato;
+.default {
+  color: black;
 }
-.default{
-    color: black;
+.dots:before {
+  display: block;
+  height: 5px;
+  margin: auto;
+  margin-top: 80px;
+  width: 5px;
+  content: "";
+  -webkit-animation: spin 1s infinite;
+  animation: spin 1s infinite;
+  border-radius: 100%;
+  -webkit-box-shadow: 20px 0 0 5px var(--primary), -20px 0 0 5px var(--primary);
+  box-shadow: 20px 0 0 5px var(--primary), -20px 0 0 5px var(--primary);
+  color: black;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

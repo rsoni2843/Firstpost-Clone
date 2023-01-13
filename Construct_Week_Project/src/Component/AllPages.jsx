@@ -60,9 +60,9 @@ function AllPages({ endPoint, pageName }) {
   console.log(data);
   if (loading) {
     return (
-      <div>
+      <h1>
         <Skeleton colorScheme={"grey.200"} h={"600px"} />
-      </div>
+      </h1>
     );
   }
   return (
