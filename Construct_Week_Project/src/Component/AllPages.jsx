@@ -59,7 +59,6 @@ function AllPages({ endPoint, pageName }) {
     console.log(currentPage);
     setPage(currentPage);
   };
-  console.log(data);
   if (loading) {
     return (
       <h1>

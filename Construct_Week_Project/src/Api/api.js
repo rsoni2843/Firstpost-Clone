@@ -37,7 +37,7 @@ const apiKey = "pub_15543b3b3dcd5c68ada43faee498a4d1b38c2";
 let api = `https://newsdata.io/api/1/news?apikey=${apiKey}`;
 // https://api.allorigins.win/raw?url=${encodeURIComponent(paymentOfferAPI)}
 export function getData({ endPoint, current }) {
-  console.log("CHECK", endPoint, current);
+  console.log(endPoint);
   return axios.get(`${api}`, {
     params: {
       category: endPoint.category,
