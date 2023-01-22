@@ -19,13 +19,13 @@ import Footer from "./Footer";
 import CurrentPage from "./CurrentPage";
 
 function AllPages({ endPoint, pageName }) {
-  const [page, setPage] = useState([]);
+  const [total, setTotal] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const initPage = Number(searchParams.get("page") || 1);
 
-  const [current, setCurrent] = useState(initPage);
+  const [page, setPage] = useState(initPage);
   const [data, setData] = useState([]);
   const [image, setImage] = useState([]);
   const [i1, setI1] = useState({});
@@ -33,13 +33,13 @@ function AllPages({ endPoint, pageName }) {
   const [i3, setI3] = useState({});
   useEffect(() => {
     handleGetData();
-  }, [current]);
+  }, [page]);
   function handleGetData() {
     setLoading(true);
-    return getData({ endPoint, current })
+    return getData({ endPoint, page })
       .then((res) => {
         setLoading(false);
-        setPage(res.data.totalResults);
+        setTotal(res.data.totalResults);
         setI1(res.data.results[0]);
         setI2(res.data.results[1]);
         setI3(res.data.results[2]);
@@ -52,10 +52,12 @@ function AllPages({ endPoint, pageName }) {
       });
   }
   useEffect(() => {
-    setSearchParams({ current });
-  }, [current, setSearchParams]);
+    setSearchParams({ page });
+  }, [page, setSearchParams]);
+
   const onChange = (currentPage) => {
-    setCurrent(currentPage);
+    console.log(currentPage);
+    setPage(currentPage);
   };
   console.log(data);
   if (loading) {
@@ -163,8 +165,8 @@ function AllPages({ endPoint, pageName }) {
       </Flex>
       <Paginations
         changingPage={onChange}
-        currentPage={current}
-        pageData={page}
+        currentPage={page}
+        pageData={total}
       />
 
       <Box mt={5} mb={3} height={2} bgColor={"#585858"}></Box>

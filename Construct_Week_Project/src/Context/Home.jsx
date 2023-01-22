@@ -3,7 +3,10 @@ import { useState } from "react";
 import AllPages from "../Component/AllPages";
 
 function Home() {
-  const [endPoint, setEndPoint] = useState({ category: "top", country: "in" });
+  const [endPoint, setEndPoint] = useState({
+    category: "politics,business,entertainment,world,top",
+    country: "in",
+  });
 
   // useEffect(()=>{
   //     getData2()
